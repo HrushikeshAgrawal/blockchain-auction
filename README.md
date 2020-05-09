@@ -2,7 +2,7 @@
 
 A public auction platform which works on the Ethereum Blockchain (Rinkeby test network). User can start a new auction with any amount of minimum bid. Bidders can bid multiple times. After the owner finishes the auction, everyone except the winner gets the Ethers back. Winning bud goes to owner. 
 
-## Live Demo - (https://blockchain-auction.herokuapp.com/)
+## Live Demo - https://blockchain-auction.herokuapp.com/
 
 ## App Demo - 
 ![Gif not supported...](public/demo.gif)
