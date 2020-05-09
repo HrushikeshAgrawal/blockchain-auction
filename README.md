@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blockchain Auction
 
-## Available Scripts
+A public auction platform which works on the Ethereum Blockchain (Rinkeby test network). User can start a new auction with any amount of minimum bid. Bidders can bid multiple times. After the owner finishes the auction, everyone except the winner gets the Ethers back. Winning bud goes to owner. 
 
-In the project directory, you can run:
+## App Demo - 
+![Gif not supported...](public/demo.gif)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the app on your local machine, clone the repository by typing following commands in your terminal.
+```
+git clone https://github.com/HrushikeshAgrawal/blockchain-auction.git
+cd blockchain-auction
+npm install OR yarn install
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Following accounts and links will be needed for you to run the app locally.
+- Infura account and rinkeby test link from it. Get it from [Infura Home Page](https://infura.io/)
+- Metamask account and its secret. Get it from [Metamask chrome extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Initial Setup
 
-### `npm run build`
+After getting the renkeby link from infura and metamask secret, update the following lines in your code:
+1. /src/ethereum/web3.js line 11 `const provider = new Web3.providers.HttpProvider("rinkeby link from infura");`
+2. /src/ethereum/deploy.js line 6 `"metamask secret",`
+3. /src/ethereum/deploy.js line 7 `"rinkeby link from infura"`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open the terminal and run `npm run compile` and then `npm run deploy`
+After successfull deployment, copy the address of deployed contract and do the final change:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4. /src/ethereum/socialMedia.js line 6 `"Address of deployed contract"`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Running the app
 
-### `npm run eject`
+Run `npm start` in your terminal and wait for the app to start.
+If the app dosent open up on its own, browse to http://localhost:3000/ in your chrome browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Make sure you are on Rinkeby Test Network on your metamask account and enjoy the app!
