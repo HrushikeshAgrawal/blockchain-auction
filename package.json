@@ -9,11 +9,11 @@
     "fs-extra": "^9.0.0",
     "ganache-cli": "^6.9.1",
     "identicon.js": "^2.3.3",
-    "mocha": "^7.1.2",
+    "mocha": "^11.7.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "solc": "^0.6.6",
     "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.0.0-beta.26"
